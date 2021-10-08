@@ -7,11 +7,13 @@
     "dev:comment": "启动开发环境",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "eslint:comment": "使用 ESLint 检查并自动修复 src 目录下所有扩展名为 .ts 文件",
-    "eslint": "eslint --fix src --ext .ts --max-warning=0",
+    "eslint": "eslint --fix src --ext .ts --max-warnings=0",
     "prettier:comment": "自动格式化 src 目录下所有 .ts 文件",
     "prettier": "prettier --write \"src/**/*.ts\"",
     "commit:comment": "引导设置规范化的提交信息",
     "commit": "cz",
+    "build:comment": "构建",
+    "build": "npm run eslint && npm run prettier && rm -rf lib && tsc --build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,18 +22,44 @@
   "devDependencies": {
     "@commitlint/cli": "^13.2.0",
     "@commitlint/config-conventional": "^13.2.0",
+    "@types/inquirer": "^8.1.3",
     "@types/node": "^16.10.1",
+    "@types/shelljs": "^0.8.9",
     "@typescript-eslint/eslint-plugin": "^4.32.0",
     "@typescript-eslint/parser": "^4.32.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.32.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^11.1.2",
     "prettier": "^2.4.1",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.4.3"
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "cz-conventional-changelog"
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "npm run eslint",
+      "npm run prettier"
+    ]
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "clear-console": "^1.1.0",
+    "commander": "^8.2.0",
+    "inquirer": "^8.2.0",
+    "shelljs": "^0.8.4"
+  },
+  "bin": {
+    "ts-cli": "./bin/ts-cli.js"
   }
 }
