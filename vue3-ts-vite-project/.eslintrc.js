@@ -38,8 +38,8 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-var': 'error',
     'prettier/prettier': 'error',
-    // 禁止出现console
-    'no-console': 'warn',
+    // 禁止出现 console
+    // 'no-console': 'warn',
     // 禁用debugger
     'no-debugger': 'warn',
     // 禁止出现重复的 case 标签
@@ -136,7 +136,6 @@ module.exports = {
     'switch-colon-spacing': 'warn',
     // 强制箭头函数的箭头前后使用一致的空格
     'arrow-spacing': 'warn',
-    'no-var': 'warn',
     'prefer-const': 'warn',
     'prefer-rest-params': 'warn',
     'no-useless-escape': 'warn',
