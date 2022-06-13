@@ -10,7 +10,8 @@ const b = 2
 <template>
   <div class="test">测试文字</div>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <router-view></router-view>
+  <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
 </template>
 
 <style lang="scss">

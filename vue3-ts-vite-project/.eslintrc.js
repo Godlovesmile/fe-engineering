@@ -153,4 +153,12 @@ module.exports = {
     defineExpose: 'readonly',
     withDefaults: 'readonly',
   },
+  overrides: [
+    {
+      files: ['src/pages/**/*.vue'],
+      rules: {
+        'vue/multi-word-component-names': 0,
+      },
+    },
+  ],
 }
