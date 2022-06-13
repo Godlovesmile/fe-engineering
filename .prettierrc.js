@@ -14,10 +14,4 @@ module.exports = {
     },
   ],
   arrowParens: 'always',
-  // husky: {
-  //   hooks: {
-  //     'pre-commit': 'lint-staged',
-  //   },
-  // },
-  // 'lint-staged': {},
 }

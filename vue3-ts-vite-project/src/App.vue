@@ -3,8 +3,8 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from './components/HelloWorld.vue'
 const a = 1
-const b = 2;
-console.log(1)
+const b = 2
+// console.log(1)
 </script>
 
 <template>
