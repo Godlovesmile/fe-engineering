@@ -147,6 +147,7 @@ module.exports = {
     'no-async-promise-executor': 'warn',
   },
   globals: {
+    path: true,
     defineProps: 'readonly',
     defineEmits: 'readonly',
     defineExpose: 'readonly',

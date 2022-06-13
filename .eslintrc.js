@@ -14,5 +14,10 @@ module.exports = {
   globals: {
     error: true,
     module: true,
+    path: true,
+    defineProps: 'readonly',
+    defineEmits: 'readonly',
+    defineExpose: 'readonly',
+    withDefaults: 'readonly',
   },
 }

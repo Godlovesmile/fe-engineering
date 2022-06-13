@@ -8,11 +8,12 @@ const b = 2
 </script>
 
 <template>
+  <div class="test">测试文字</div>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 </template>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -20,5 +21,8 @@ const b = 2
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.test {
+  color: $test-color;
 }
 </style>
